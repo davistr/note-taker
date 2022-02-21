@@ -8,3 +8,6 @@
 * HTML/CSS
 * Node
 * Express
+
+## Deployed application link: 
+* https://shielded-cove-09244.herokuapp.com/
