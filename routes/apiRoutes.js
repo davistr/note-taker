@@ -1,11 +1,9 @@
-
 const router = require('express').Router();
-const storage = require('../db/storage');
+const { read, write, getNotes, addNote } = require('../db/storage');
 
 
 router.get('/notes', (req, res) => {
-    storage
-        .getNotes()
+    getNotes()
         .then((notes) => {
             return res.json(notes);
         })
@@ -14,11 +12,15 @@ router.get('/notes', (req, res) => {
 
 
 router.post('/notes', (req, res) => {
-    storage
-        .addNote(req.body)
+    addNote(req.body)
         .then((note) => res.json(note))
         .catch((err) => res.status(500).json(err));
-})
+});
 
+router.delete('/notes/:id', (req, res) => {
+    removeNote(req.params.id)
+        .then(() => res.json({ ok: true }))
+        .catch((err) => res.status(500).json(err));
+});
 
 module.exports = router;
