@@ -9,5 +9,8 @@
 * Node
 * Express
 
+## Screenshot(s)
+![](images/app_screenshot.jpg)
+
 ## Deployed application link: 
 * https://shielded-cove-09244.herokuapp.com/

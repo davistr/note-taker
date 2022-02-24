@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/davistr/note-taker#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "uuid": "^8.3.2"
   }
 }
